@@ -1,22 +1,23 @@
-# Requirements:
-Install requirements via:
-```bash
-pip install -r requirements.txt
-```
+# AI Resume Screener (MPNet-Base)
 
-# Kaggle Dataset(Required for Task 1 And Task 3):
-https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset
+An AI-powered resume screening tool built using the **MPNet-Base** model for semantic similarity matching.  
+This project compares resumes against job descriptions, ranks candidates based on relevance, and streamlines the hiring process using **Natural Language Processing (NLP)**.
 
-# Task 1:
-task1.ipynb is used to parse and extract relevant information from resumes. I have also added functionality to save the extracted information(skills, education, experience and resume category) in a CSV file.
+---
 
+## 🚀 Features
+- **Semantic Matching** – Uses MPNet-Base embeddings for high-accuracy similarity scoring.
+- **Automated Ranking** – Ranks resumes based on job description relevance.
+- **Batch Processing** – Handles multiple resumes at once.
+- **Easy Integration** – Can be plugged into HR or ATS systems.
+- **Customizable** – Easily adapt scoring thresholds & output formats.
 
-# HuggingFace Dataset(Required For Task 2 and Task 3):
-https://huggingface.co/datasets/jacob-hugging-face/job-descriptions/viewer/default/train?row=0
+---
 
-# Task 2:
-tsk2.ipynb extracts skills from the HuggingFace dataset. I've made use of the Datasets library to do so. The extracted data is cleaned and stored in another CSV.
+## 🛠 Tech Stack
+- **Python 3.8+**
+- **Hugging Face Transformers**
+- **Pandas & NumPy**
+- **Scikit-learn**
+- **MPNet-Base** (for embeddings)
 
-# Task 3:
-The actual matching happens in 3.ipynb. I've made use of SkLearn's Cosine Similarity to match **skills required from the output CSV of Task 2** with **skills that the candidate has**, extracted from
-**task1.ipynb**.
